@@ -11,7 +11,8 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 const CORS_ORIGIN = process.env.CORS_ORIGIN || 'http://localhost:5173';
-const CORS_ORIGIN_OFFICIAL = process.env.CORS_ORIGIN_official || 'http://localhost:5172';
+const CORS_ORIGIN_OFFICIAL = process.env.CORS_ORIGIN_official || 'https://urlshortner-navya-t-jacobs-projects.vercel.app';
+console.log(process.env.CORS_ORIGIN_official)
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

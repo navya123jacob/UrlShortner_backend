@@ -15,7 +15,9 @@ import {
 import { ImageUpload } from "../middleware/multer";
 
 const router = express.Router();
-
+router.get("/",(req,res)=>{
+  res.send('working')
+})
 router.post("/create_link", ImageUpload.single("qrCode"), (req, res) =>
   CreateLink(req, res)
 );
